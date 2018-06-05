@@ -1,4 +1,4 @@
-#Muestra todos los títulos de las películas.
+#Listar la información. Todos los títutlos de las películas 
 import json
 from pprint import pprint
 with open("peliculas.json") as data_file:
