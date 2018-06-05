@@ -1,8 +1,18 @@
-#Muestra todas las películas del genero “Documental”
+#Buscar o filtrar información. Introduce una letra y buscará todas las peliculas que empiecen por esa lista
 import json
 from pprint import pprint
 with open("peliculas.json") as data_file:
 	data=json.load(data_file)
+contador=0
+lista=[]
+letra=input("Introduce una letra: ").upper()
 for bloque in data["peliculas"]:
-	if bloque["clasificacion"] == "Documental":
-		print("El título del documental es:",bloque["nombre"])
+	contador=contador+1
+	lista.append(bloque["nombre"])
+encontrado=False
+for i in lista:
+	if i[0] == letra:
+		print(i)
+		encontrado=True
+if not encontrado:	
+	print("No hay ninguna pelicula que empiece por esa letra")
