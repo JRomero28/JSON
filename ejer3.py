@@ -1,4 +1,4 @@
-#Buscar o filtrar información. Introduce una letra y buscará todas las peliculas que empiecen por esa lista
+#Buscar o filtrar información. Introduce una letra y buscará todas las peliculas que empiecen por esa letra
 import json
 from pprint import pprint
 with open("peliculas.json") as data_file:
